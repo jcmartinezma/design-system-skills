@@ -1,0 +1,9 @@
+# Replace {owner} with a GitHub user or team before relying on this file.
+# Suggested placement: .github/CODEOWNERS
+
+/docs/tokens/ {owner}
+/docs/components/ {owner}
+/docs/patterns/ {owner}
+/docs/governance/ {owner}
+/AGENTS.md {owner}
+/CHANGELOG.md {owner}

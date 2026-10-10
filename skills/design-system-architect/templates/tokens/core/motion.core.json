@@ -1,0 +1,31 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "duration": {
+    "$description": "Core durations in milliseconds",
+    "$type": "duration",
+    "100": {
+      "$value": { "value": 150, "unit": "ms" },
+      "$description": "duration-100 — 150ms"
+    },
+    "200": {
+      "$value": { "value": 300, "unit": "ms" },
+      "$description": "duration-200 — 300ms"
+    }
+  },
+  "delay": {
+    "$description": "Core delays",
+    "$type": "duration",
+    "0": {
+      "$value": { "value": 0, "unit": "ms" },
+      "$description": "delay-0 — no delay"
+    }
+  },
+  "easing": {
+    "$description": "Core cubic-bezier curves",
+    "$type": "cubicBezier",
+    "100": {
+      "$value": [0.2, 0, 0, 1],
+      "$description": "easing-100 — standard ease-out"
+    }
+  }
+}

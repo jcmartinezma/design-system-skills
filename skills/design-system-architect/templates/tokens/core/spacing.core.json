@@ -1,0 +1,27 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "spacing": {
+    "$description": "Core spacing scale on a 4px step. Specs should use semantic names, not these steps.",
+    "$type": "dimension",
+    "100": {
+      "$value": { "value": 4, "unit": "px" },
+      "$description": "spacing-100 — 4px"
+    },
+    "200": {
+      "$value": { "value": 8, "unit": "px" },
+      "$description": "spacing-200 — 8px"
+    },
+    "300": {
+      "$value": { "value": 16, "unit": "px" },
+      "$description": "spacing-300 — 16px"
+    },
+    "400": {
+      "$value": { "value": 24, "unit": "px" },
+      "$description": "spacing-400 — 24px"
+    },
+    "500": {
+      "$value": { "value": 32, "unit": "px" },
+      "$description": "spacing-500 — 32px"
+    }
+  }
+}

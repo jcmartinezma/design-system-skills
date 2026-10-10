@@ -1,0 +1,27 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "border-width": {
+    "$description": "Core stroke widths",
+    "$type": "dimension",
+    "100": {
+      "$value": { "value": 1, "unit": "px" },
+      "$description": "border-width-100 — 1px"
+    },
+    "200": {
+      "$value": { "value": 2, "unit": "px" },
+      "$description": "border-width-200 — 2px"
+    }
+  },
+  "border-style": {
+    "$description": "Core stroke styles",
+    "$type": "strokeStyle",
+    "solid": {
+      "$value": "solid",
+      "$description": "border-style-solid"
+    },
+    "dashed": {
+      "$value": "dashed",
+      "$description": "border-style-dashed"
+    }
+  }
+}

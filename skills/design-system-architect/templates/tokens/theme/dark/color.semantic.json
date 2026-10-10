@@ -1,0 +1,169 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "color": {
+    "$description": "Dark mode overrides. Same public names as semantic color. Core ramps stay unchanged.",
+    "$type": "color",
+    "bg": {
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.900}",
+          "$description": "color-bg-primary — page background (dark)"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.black}",
+          "$description": "color-bg-secondary — offset page background (dark)"
+        }
+      }
+    },
+    "surface": {
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.700}",
+          "$description": "color-surface-primary — container (dark)"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.neutral.900}",
+          "$description": "color-surface-secondary — quiet container (dark)"
+        }
+      },
+      "success": {
+        "$root": {
+          "$value": "{color.green.900}",
+          "$description": "color-surface-success (dark)"
+        }
+      },
+      "warning": {
+        "$root": {
+          "$value": "{color.amber.900}",
+          "$description": "color-surface-warning (dark)"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.900}",
+          "$description": "color-surface-danger (dark)"
+        }
+      }
+    },
+    "action": {
+      "primary": {
+        "$root": {
+          "$value": "{color.brand.500}",
+          "$description": "color-action-primary (dark)"
+        },
+        "hover": {
+          "$value": "{color.brand.300}",
+          "$description": "color-action-primary-hover (dark)"
+        },
+        "active": {
+          "$value": "{color.brand.300}",
+          "$description": "color-action-primary-active (dark)"
+        },
+        "disabled": {
+          "$value": "{color.neutral.700}",
+          "$description": "color-action-primary-disabled (dark)"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.neutral.700}",
+          "$description": "color-action-secondary (dark)"
+        },
+        "hover": {
+          "$value": "{color.neutral.500}",
+          "$description": "color-action-secondary-hover (dark)"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.500}",
+          "$description": "color-action-danger (dark)"
+        },
+        "hover": {
+          "$value": "{color.red.300}",
+          "$description": "color-action-danger-hover (dark)"
+        }
+      }
+    },
+    "text": {
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.100}",
+          "$description": "color-text-primary (dark)"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.neutral.300}",
+          "$description": "color-text-secondary (dark)"
+        },
+        "disabled": {
+          "$value": "{color.neutral.500}",
+          "$description": "color-text-secondary-disabled (dark)"
+        }
+      },
+      "inverse": {
+        "$root": {
+          "$value": "{color.neutral.900}",
+          "$description": "color-text-inverse (dark)"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.300}",
+          "$description": "color-text-danger (dark)"
+        }
+      }
+    },
+    "border": {
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.500}",
+          "$description": "color-border-primary (dark)"
+        },
+        "disabled": {
+          "$value": "{color.neutral.700}",
+          "$description": "color-border-primary-disabled (dark)"
+        }
+      },
+      "accent": {
+        "$root": {
+          "$value": "{color.brand.300}",
+          "$description": "color-border-accent (dark)"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.300}",
+          "$description": "color-border-danger (dark)"
+        }
+      }
+    },
+    "icon": {
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.100}",
+          "$description": "color-icon-primary (dark)"
+        }
+      },
+      "accent": {
+        "$root": {
+          "$value": "{color.brand.300}",
+          "$description": "color-icon-accent (dark)"
+        }
+      }
+    },
+    "shadow": {
+      "overlay": {
+        "$root": {
+          "$value": "{color.alpha.200}",
+          "$description": "color-shadow-overlay (dark)"
+        }
+      }
+    }
+  }
+}

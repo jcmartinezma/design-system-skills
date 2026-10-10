@@ -1,0 +1,15 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "border": {
+    "$description": "Composite borders. Bind width, style, and color separately when the tool has no border style.",
+    "$type": "border",
+    "default": {
+      "$description": "border-default",
+      "$value": {
+        "color": "{color.border.primary}",
+        "width": "{border-width.100}",
+        "style": "{border-style.solid}"
+      }
+    }
+  }
+}

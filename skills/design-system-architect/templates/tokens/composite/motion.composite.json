@@ -1,0 +1,17 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "motion": {
+    "$description": "Composite transitions",
+    "transition": {
+      "$type": "transition",
+      "fast": {
+        "$description": "motion-transition-fast — hover and press",
+        "$value": {
+          "duration": "{motion.speed.fast}",
+          "delay": "{motion.delay.none}",
+          "timingFunction": "{motion.easing.standard}"
+        }
+      }
+    }
+  }
+}

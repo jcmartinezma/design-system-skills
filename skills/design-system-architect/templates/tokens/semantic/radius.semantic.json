@@ -1,0 +1,19 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "radius": {
+    "$description": "Semantic corner radius",
+    "$type": "dimension",
+    "sm": {
+      "$value": "{radius.100}",
+      "$description": "radius-sm — controls and inputs"
+    },
+    "md": {
+      "$value": "{radius.200}",
+      "$description": "radius-md — cards"
+    },
+    "full": {
+      "$value": "{radius.300}",
+      "$description": "radius-full — pills"
+    }
+  }
+}

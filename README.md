@@ -82,7 +82,7 @@ description: Una frase que explique qué hace y cuándo debe usarla el agente.
 
 | Skill | Descripción | Estado |
 |---|---|---|
-| _Próximamente_ | | |
+| [design-system-architect](skills/design-system-architect/) | Crea un design system desde cero (tokens DTCG, specs, gobernanza y guía para agentes) o audita uno existente y propone un plan de mejora. | Disponible |
 
 ## Licencia
 

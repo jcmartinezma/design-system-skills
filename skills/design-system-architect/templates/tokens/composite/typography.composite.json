@@ -1,0 +1,41 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "text": {
+    "$description": "Composite text styles. Map these to text styles, not variables.",
+    "heading": {
+      "1": {
+        "$type": "typography",
+        "$description": "text-heading-1 — page title",
+        "$value": {
+          "fontFamily": "{text.style.base}",
+          "fontSize": "{text.size.lg}",
+          "fontWeight": "{text.weight.bold}",
+          "lineHeight": "{text.leading.lg}",
+          "letterSpacing": "{text.letterSpacing.normal}"
+        }
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$description": "text-body — default reading text",
+      "$value": {
+        "fontFamily": "{text.style.base}",
+        "fontSize": "{text.size.md}",
+        "fontWeight": "{text.weight.regular}",
+        "lineHeight": "{text.leading.md}",
+        "letterSpacing": "{text.letterSpacing.normal}"
+      }
+    },
+    "label": {
+      "$type": "typography",
+      "$description": "text-label — buttons and form labels",
+      "$value": {
+        "fontFamily": "{text.style.base}",
+        "fontSize": "{text.size.sm}",
+        "fontWeight": "{text.weight.semibold}",
+        "lineHeight": "{text.leading.sm}",
+        "letterSpacing": "{text.letterSpacing.normal}"
+      }
+    }
+  }
+}

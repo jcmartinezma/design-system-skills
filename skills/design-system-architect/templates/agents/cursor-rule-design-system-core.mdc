@@ -1,0 +1,15 @@
+---
+description: Layering, token naming, and backlog rules for {system-name}
+alwaysApply: true
+---
+
+# Design system core
+
+Dependencies flow downward: vision → foundations → components → patterns. Governance applies to every layer.
+
+- Token values live in `docs/tokens/`. Specs cite names, not raw hex or px.
+- Color roles follow `color-{element}-{hierarchy}-{state}`. Default state is `$root`.
+- `color.action.*` is for control fills. `color.surface.*` is for containers. `color.icon.*` is for icons.
+- Prefer editing an existing doc over adding a second one that says the same thing.
+- When a rule is missing, add a decisions-backlog entry. Do not invent a conflicting rule.
+- Read `AGENTS.md` for the full order of work.

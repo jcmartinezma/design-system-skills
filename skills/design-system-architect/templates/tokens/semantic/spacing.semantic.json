@@ -1,0 +1,27 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "spacing": {
+    "$description": "Semantic spacing roles. Use these names in specs.",
+    "$type": "dimension",
+    "xs": {
+      "$value": "{spacing.100}",
+      "$description": "spacing-xs — icon-to-label gap"
+    },
+    "sm": {
+      "$value": "{spacing.200}",
+      "$description": "spacing-sm — compact padding"
+    },
+    "md": {
+      "$value": "{spacing.300}",
+      "$description": "spacing-md — default padding and stack gap"
+    },
+    "lg": {
+      "$value": "{spacing.400}",
+      "$description": "spacing-lg — section gap"
+    },
+    "xl": {
+      "$value": "{spacing.500}",
+      "$description": "spacing-xl — page separation"
+    }
+  }
+}

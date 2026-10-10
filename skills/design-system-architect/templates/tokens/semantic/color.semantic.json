@@ -1,0 +1,176 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "color": {
+    "$description": "Semantic color. Name: color-{element}-{hierarchy}-{state}. Default state is $root and is omitted from the public name.",
+    "$type": "color",
+    "bg": {
+      "$description": "Page backgrounds only",
+      "primary": {
+        "$root": {
+          "$value": "{color.white}",
+          "$description": "color-bg-primary — default page background"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.neutral.100}",
+          "$description": "color-bg-secondary — offset page background"
+        }
+      }
+    },
+    "surface": {
+      "$description": "Containers on the page: cards, panels, menus. Not button fills.",
+      "primary": {
+        "$root": {
+          "$value": "{color.white}",
+          "$description": "color-surface-primary — default container"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.neutral.100}",
+          "$description": "color-surface-secondary — quiet container"
+        }
+      },
+      "success": {
+        "$root": {
+          "$value": "{color.green.100}",
+          "$description": "color-surface-success — success banner"
+        }
+      },
+      "warning": {
+        "$root": {
+          "$value": "{color.amber.100}",
+          "$description": "color-surface-warning — warning banner"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.100}",
+          "$description": "color-surface-danger — error banner"
+        }
+      }
+    },
+    "action": {
+      "$description": "Fills for controls that commit an action. Keep these separate from surface.",
+      "primary": {
+        "$root": {
+          "$value": "{color.brand.700}",
+          "$description": "color-action-primary — main call to action"
+        },
+        "hover": {
+          "$value": "{color.brand.900}",
+          "$description": "color-action-primary-hover"
+        },
+        "active": {
+          "$value": "{color.brand.900}",
+          "$description": "color-action-primary-active"
+        },
+        "disabled": {
+          "$value": "{color.neutral.300}",
+          "$description": "color-action-primary-disabled"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.neutral.100}",
+          "$description": "color-action-secondary — alternate action"
+        },
+        "hover": {
+          "$value": "{color.neutral.300}",
+          "$description": "color-action-secondary-hover"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.700}",
+          "$description": "color-action-danger — destructive action"
+        },
+        "hover": {
+          "$value": "{color.red.900}",
+          "$description": "color-action-danger-hover"
+        }
+      }
+    },
+    "text": {
+      "$description": "Text colors",
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.900}",
+          "$description": "color-text-primary — headings and emphasis"
+        }
+      },
+      "secondary": {
+        "$root": {
+          "$value": "{color.neutral.700}",
+          "$description": "color-text-secondary — body copy"
+        },
+        "disabled": {
+          "$value": "{color.neutral.500}",
+          "$description": "color-text-secondary-disabled"
+        }
+      },
+      "inverse": {
+        "$root": {
+          "$value": "{color.white}",
+          "$description": "color-text-inverse — text on action or dark surfaces"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.700}",
+          "$description": "color-text-danger — error text"
+        }
+      }
+    },
+    "border": {
+      "$description": "Strokes and dividers. Width and style stay in border-width and border-style.",
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.300}",
+          "$description": "color-border-primary — default stroke"
+        },
+        "disabled": {
+          "$value": "{color.neutral.100}",
+          "$description": "color-border-primary-disabled"
+        }
+      },
+      "accent": {
+        "$root": {
+          "$value": "{color.brand.700}",
+          "$description": "color-border-accent — focus ring"
+        }
+      },
+      "danger": {
+        "$root": {
+          "$value": "{color.red.700}",
+          "$description": "color-border-danger — invalid field"
+        }
+      }
+    },
+    "icon": {
+      "$description": "Icon colors. Do not use these as button fills.",
+      "primary": {
+        "$root": {
+          "$value": "{color.neutral.700}",
+          "$description": "color-icon-primary"
+        }
+      },
+      "accent": {
+        "$root": {
+          "$value": "{color.brand.700}",
+          "$description": "color-icon-accent"
+        }
+      }
+    },
+    "shadow": {
+      "$description": "Shadow tints",
+      "overlay": {
+        "$root": {
+          "$value": "{color.alpha.200}",
+          "$description": "color-shadow-overlay"
+        }
+      }
+    }
+  }
+}

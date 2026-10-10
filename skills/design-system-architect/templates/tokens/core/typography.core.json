@@ -1,0 +1,63 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "fontFamily": {
+    "$description": "One family name per token. CSS font stacks belong in product code, not here.",
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "system-ui",
+      "$description": "font-family-sans — replace with the licensed UI family"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "ui-monospace",
+      "$description": "font-family-mono — replace with the licensed mono family"
+    }
+  },
+  "fontWeight": {
+    "$description": "Core font weights",
+    "$type": "fontWeight",
+    "400": { "$value": 400, "$description": "font-weight-400" },
+    "600": { "$value": 600, "$description": "font-weight-600" },
+    "700": { "$value": 700, "$description": "font-weight-700" }
+  },
+  "fontSize": {
+    "$description": "Core type size scale",
+    "$type": "dimension",
+    "100": {
+      "$value": { "value": 14, "unit": "px" },
+      "$description": "font-size-100 — 14px"
+    },
+    "200": {
+      "$value": { "value": 16, "unit": "px" },
+      "$description": "font-size-200 — 16px"
+    },
+    "300": {
+      "$value": { "value": 24, "unit": "px" },
+      "$description": "font-size-300 — 24px"
+    }
+  },
+  "lineHeight": {
+    "$description": "Core line heights",
+    "$type": "dimension",
+    "100": {
+      "$value": { "value": 20, "unit": "px" },
+      "$description": "line-height-100 — 20px"
+    },
+    "200": {
+      "$value": { "value": 24, "unit": "px" },
+      "$description": "line-height-200 — 24px"
+    },
+    "300": {
+      "$value": { "value": 32, "unit": "px" },
+      "$description": "line-height-300 — 32px"
+    }
+  },
+  "letterSpacing": {
+    "$description": "Core letter spacing",
+    "$type": "dimension",
+    "0": {
+      "$value": { "value": 0, "unit": "px" },
+      "$description": "letter-spacing-0"
+    }
+  }
+}

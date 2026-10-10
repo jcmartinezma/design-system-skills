@@ -1,0 +1,17 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "shadow": {
+    "$description": "Composite elevation. Map to effect styles.",
+    "$type": "shadow",
+    "sm": {
+      "$description": "shadow-sm — cards and menus",
+      "$value": {
+        "color": "{color.shadow.overlay}",
+        "offsetX": "{shadow.offset.0}",
+        "offsetY": "{shadow.offset.100}",
+        "blur": "{shadow.blur.100}",
+        "spread": "{shadow.spread.0}"
+      }
+    }
+  }
+}

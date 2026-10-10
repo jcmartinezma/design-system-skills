@@ -1,0 +1,45 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "text": {
+    "$description": "Semantic type roles. Composites assemble these into text styles.",
+    "style": {
+      "$description": "Family roles",
+      "base": {
+        "$type": "fontFamily",
+        "$value": "{fontFamily.sans}",
+        "$description": "text-style-base — UI and body"
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": "{fontFamily.mono}",
+        "$description": "text-style-mono — code and identifiers"
+      }
+    },
+    "size": {
+      "$description": "Size roles",
+      "$type": "dimension",
+      "sm": { "$value": "{fontSize.100}", "$description": "text-size-sm" },
+      "md": { "$value": "{fontSize.200}", "$description": "text-size-md" },
+      "lg": { "$value": "{fontSize.300}", "$description": "text-size-lg" }
+    },
+    "weight": {
+      "$description": "Weight roles",
+      "$type": "fontWeight",
+      "regular": { "$value": "{fontWeight.400}", "$description": "text-weight-regular" },
+      "semibold": { "$value": "{fontWeight.600}", "$description": "text-weight-semibold" },
+      "bold": { "$value": "{fontWeight.700}", "$description": "text-weight-bold" }
+    },
+    "leading": {
+      "$description": "Line-height roles",
+      "$type": "dimension",
+      "sm": { "$value": "{lineHeight.100}", "$description": "text-leading-sm" },
+      "md": { "$value": "{lineHeight.200}", "$description": "text-leading-md" },
+      "lg": { "$value": "{lineHeight.300}", "$description": "text-leading-lg" }
+    },
+    "letterSpacing": {
+      "$description": "Tracking roles",
+      "$type": "dimension",
+      "normal": { "$value": "{letterSpacing.0}", "$description": "text-letter-spacing-normal" }
+    }
+  }
+}

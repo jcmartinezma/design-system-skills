@@ -1,0 +1,55 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "color": {
+    "$description": "Raw palette. Replace the brand ramp with the product hue. Do not use these names in component specs.",
+    "$type": "color",
+    "neutral": {
+      "$description": "Neutral ramp for text, borders, and surfaces",
+      "100": { "$value": "#F4F6F8", "$description": "color-neutral-100 — lightest neutral" },
+      "300": { "$value": "#D5DBE3", "$description": "color-neutral-300 — hairline and quiet borders" },
+      "500": { "$value": "#6E7A8A", "$description": "color-neutral-500 — muted text and icons" },
+      "700": { "$value": "#3A4553", "$description": "color-neutral-700 — secondary text" },
+      "900": { "$value": "#1C2430", "$description": "color-neutral-900 — primary text and dark page" }
+    },
+    "brand": {
+      "$description": "Placeholder brand ramp. Swap every step before publishing.",
+      "100": { "$value": "#E7F0FF", "$description": "color-brand-100 — brand tint" },
+      "300": { "$value": "#8FB4FF", "$description": "color-brand-300 — light brand" },
+      "500": { "$value": "#3D74F5", "$description": "color-brand-500 — mid brand" },
+      "700": { "$value": "#1E4FD0", "$description": "color-brand-700 — default brand action" },
+      "900": { "$value": "#16368F", "$description": "color-brand-900 — pressed brand" }
+    },
+    "green": {
+      "$description": "Success ramp",
+      "100": { "$value": "#E5F6EC", "$description": "color-green-100 — success tint" },
+      "300": { "$value": "#86D7A6", "$description": "color-green-300" },
+      "500": { "$value": "#1F9D55", "$description": "color-green-500" },
+      "700": { "$value": "#0F7A3F", "$description": "color-green-700 — success text" },
+      "900": { "$value": "#0B4F2A", "$description": "color-green-900" }
+    },
+    "amber": {
+      "$description": "Warning ramp",
+      "100": { "$value": "#FFF4D6", "$description": "color-amber-100 — warning tint" },
+      "300": { "$value": "#F5C76A", "$description": "color-amber-300" },
+      "500": { "$value": "#E09A12", "$description": "color-amber-500" },
+      "700": { "$value": "#A86B09", "$description": "color-amber-700 — warning text" },
+      "900": { "$value": "#6E4506", "$description": "color-amber-900" }
+    },
+    "red": {
+      "$description": "Danger ramp",
+      "100": { "$value": "#FDE8E8", "$description": "color-red-100 — danger tint" },
+      "300": { "$value": "#F3A3A3", "$description": "color-red-300" },
+      "500": { "$value": "#E04545", "$description": "color-red-500" },
+      "700": { "$value": "#C02828", "$description": "color-red-700 — danger text and action" },
+      "900": { "$value": "#8A1C1C", "$description": "color-red-900 — pressed danger" }
+    },
+    "alpha": {
+      "$description": "Neutral translucency for scrims and shadows",
+      "100": { "$value": "rgba(28, 36, 48, 0.08)", "$description": "color-alpha-100 — soft shadow" },
+      "200": { "$value": "rgba(28, 36, 48, 0.16)", "$description": "color-alpha-200 — overlay shadow" }
+    },
+    "white": { "$value": "#FFFFFF", "$description": "color-white" },
+    "black": { "$value": "#000000", "$description": "color-black" },
+    "transparent": { "$value": "transparent", "$description": "color-transparent" }
+  }
+}

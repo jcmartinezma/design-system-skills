@@ -1,0 +1,35 @@
+{
+  "$schema": "https://www.designtokens.org/tr/2025.10/format/",
+  "motion": {
+    "$description": "Semantic motion roles",
+    "speed": {
+      "$description": "How long a transition runs",
+      "fast": {
+        "$type": "duration",
+        "$value": "{duration.100}",
+        "$description": "motion-speed-fast — hover and press"
+      },
+      "normal": {
+        "$type": "duration",
+        "$value": "{duration.200}",
+        "$description": "motion-speed-normal — panels"
+      }
+    },
+    "delay": {
+      "$description": "Wait before motion starts",
+      "$type": "duration",
+      "none": {
+        "$value": "{delay.0}",
+        "$description": "motion-delay-none"
+      }
+    },
+    "easing": {
+      "$description": "How motion accelerates",
+      "$type": "cubicBezier",
+      "standard": {
+        "$value": "{easing.100}",
+        "$description": "motion-easing-standard"
+      }
+    }
+  }
+}
