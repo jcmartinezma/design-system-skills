@@ -83,6 +83,8 @@ description: Una frase que explique qué hace y cuándo debe usarla el agente.
 | Skill | Descripción | Estado |
 |---|---|---|
 | [design-system-architect](skills/design-system-architect/) | Crea un design system desde cero (tokens DTCG, specs, gobernanza y guía para agentes) o audita uno existente y propone un plan de mejora. | Disponible |
+| [aria-implementation](skills/aria-implementation/) | Especifica e implementa un componente interactivo accesible: HTML nativo primero, patrón del APG, nombre, estados, teclado y foco. | Disponible |
+| [aria-review](skills/aria-review/) | Revisa código, un diff o una página y devuelve hallazgos de ARIA y teclado con severidad, criterio WCAG y un veredicto por componente. | Disponible |
 
 ## Licencia
 
