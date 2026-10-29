@@ -1,14 +1,14 @@
 # design-system-skills
 
-Colección de skills para agentes de IA pensadas para el trabajo diario con design systems: fundamentos y tokens, componentes, documentación, gobernanza y métricas.
+A collection of AI agent skills for day-to-day work with design systems and Spec-Driven Development (SDD): foundations and tokens, components, documentation, governance, metrics, and spec/plan/tasks scaffolding.
 
-Cada skill es un paquete autocontenido: un agente lee sus instrucciones y, cuando hace falta, ejecuta sus scripts para resolver tareas de forma fiable y repetible.
+Each skill is a self-contained package: an agent reads its instructions and, when needed, runs its scripts to solve tasks reliably and repeatably.
 
-## Por qué
+## Why
 
-Muchas tareas de un sistema de diseño son deterministas: generar rampas de color, validar contraste, exportar tokens, auditar componentes. En lugar de que el agente las improvise cada vez, estas skills le dan instrucciones claras y código probado para hacerlas bien.
+Many design-system and documentation tasks are deterministic: generate color ramps, validate contrast, export tokens, audit components, scaffold SDD docs. Instead of the agent improvising each time, these skills give clear instructions and proven code to do them well.
 
-## Estructura del repositorio
+## Repository structure
 
 ```
 design-system-skills/
@@ -16,81 +16,82 @@ design-system-skills/
 ├── LICENSE
 ├── CONTRIBUTING.md
 └── skills/
-    ├── nombre-de-la-skill/
-    │   ├── SKILL.md        # Instrucciones para el agente (obligatorio)
-    │   ├── README.md       # Documentación para personas (recomendado)
-    │   ├── scripts/        # Lógica ejecutable (opcional)
-    │   ├── tests/          # Tests de los scripts (si hay scripts)
-    │   └── examples/       # Entradas y salidas de ejemplo (opcional)
-    └── otra-skill/
+    ├── skill-name/
+    │   ├── SKILL.md        # Instructions for the agent (required)
+    │   ├── README.md       # Documentation for people (recommended)
+    │   ├── scripts/        # Executable logic (optional)
+    │   ├── tests/          # Script tests (when scripts exist)
+    │   └── examples/       # Sample inputs and outputs (optional)
+    └── another-skill/
         └── ...
 ```
 
-## Qué incluye cada skill
+## What each skill includes
 
-| Archivo / carpeta | Obligatorio | Para quién | Contenido |
+| File / folder | Required | For | Content |
 |---|---|---|---|
-| `SKILL.md` | Sí | Agente | Qué hace la skill, cuándo usarla, pasos a seguir y qué scripts lanzar |
-| `README.md` | Recomendado | Personas | Descripción, instalación, dependencias y ejemplos |
-| `scripts/` | No | Agente | Código que resuelve la parte determinista de la tarea |
-| `tests/` | Si hay scripts | Mantenedores | Tests que garantizan que los scripts siguen funcionando |
-| `examples/` | No | Ambos | Casos de uso con entrada y salida esperada |
+| `SKILL.md` | Yes | Agent | What the skill does, when to use it, steps to follow, and which scripts to run |
+| `README.md` | Recommended | People | Description, installation, dependencies, and examples |
+| `scripts/` | No | Agent | Code that handles the deterministic part of the task |
+| `tests/` | If there are scripts | Maintainers | Tests that keep the scripts working |
+| `examples/` | No | Both | Use cases with expected input and output |
 
-### Formato de `SKILL.md`
+### `SKILL.md` format
 
-Cada `SKILL.md` empieza con un frontmatter que identifica la skill:
+Every `SKILL.md` starts with frontmatter that identifies the skill:
 
 ```markdown
 ---
-name: nombre-de-la-skill
-description: Una frase que explique qué hace y cuándo debe usarla el agente.
+name: skill-name
+description: One sentence explaining what it does and when the agent should use it.
 ---
 
-# Nombre de la skill
+# Skill name
 
-## Cuándo usarla
+## When to use it
 ...
 
-## Pasos
+## Steps
 1. ...
-2. Ejecuta `python scripts/generate.py --input ...` y usa su salida.
+2. Run `python scripts/generate.py --input ...` and use its output.
 ```
 
-## Convención de nombres
+## Naming conventions
 
-- Carpetas en `kebab-case`, en inglés y en minúsculas: `color-ramps`, `token-export`, `component-audit`.
-- El campo `name` del frontmatter coincide con el nombre de la carpeta.
-- Nombres que describan la tarea, no la herramienta: `contrast-check` mejor que `apca-script`.
-- Scripts con verbos claros: `generate.py`, `validate.py`, `export.py`.
+- Folders in `kebab-case`, English, lowercase: `color-ramps`, `token-export`, `component-audit`.
+- The frontmatter `name` field matches the folder name.
+- Names describe the task, not the tool: `contrast-check` over `apca-script`.
+- Scripts use clear verbs: `generate.py`, `validate.py`, `export.py`.
 
-## Cómo usar una skill
+## How to use a skill
 
-1. Copia la carpeta de la skill en el directorio de skills de tu agente.
-2. Instala las dependencias que indique su `README.md`, si las hay.
-3. Pide la tarea al agente con normalidad: leerá el `SKILL.md` cuando sea relevante.
+1. Copy the skill folder into your agent's skills directory.
+2. Install any dependencies listed in its `README.md`, if any.
+3. Ask the agent for the task as usual: it will read `SKILL.md` when relevant.
 
-## Cómo añadir una skill nueva
+## How to add a new skill
 
-1. Crea una carpeta en `skills/` siguiendo la convención de nombres.
-2. Escribe el `SKILL.md` con su frontmatter (`name` y `description`).
-3. Si la skill necesita código, añádelo en `scripts/` y sus tests en `tests/`.
-4. Documenta el uso y las dependencias en el `README.md` de la skill.
-5. Añade la skill al índice de este README.
-6. Abre un pull request describiendo qué resuelve la skill.
+1. Create a folder under `skills/` following the naming conventions.
+2. Write `SKILL.md` with its frontmatter (`name` and `description`).
+3. If the skill needs code, add it under `scripts/` and tests under `tests/`.
+4. Document usage and dependencies in the skill's `README.md`.
+5. Add the skill to the index in this README.
+6. Open a pull request describing what the skill solves.
 
-## Índice de skills
+## Skills index
 
-| Skill | Descripción | Estado |
+| Skill | Description | Status |
 |---|---|---|
+<<<<<<< HEAD
 | [design-system-architect](skills/design-system-architect/) | Crea un design system desde cero (tokens DTCG, specs, gobernanza y guía para agentes) o audita uno existente y propone un plan de mejora. | Disponible |
 | [aria-implementation](skills/aria-implementation/) | Especifica e implementa un componente interactivo accesible: HTML nativo primero, patrón del APG, nombre, estados, teclado y foco. | Disponible |
 | [aria-review](skills/aria-review/) | Revisa código, un diff o una página y devuelve hallazgos de ARIA y teclado con severidad, criterio WCAG y un veredicto por componente. | Disponible |
 | [spec-driven-development](skills/spec-driven-development/) | Lleva una feature con un SDD medio: una spec por feature, un plan corto, commits por paso y validación de cada criterio. | Disponible |
 
-## Licencia
+## License
 
-Este proyecto se distribuye bajo la licencia indicada en [`LICENSE`](LICENSE).
+This project is distributed under the license in [`LICENSE`](LICENSE).
 
 ---
 
-Creado por [José Carlos Martínez](https://jcmartinez.net), Product Designer especializado en Design Systems y flujos con IA.
+Created by [José Carlos Martínez](https://jcmartinez.net), Product Designer focused on Design Systems and AI workflows.
