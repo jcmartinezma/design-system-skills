@@ -1,43 +1,43 @@
-# Plan: {Título de la feature}
+# Plan: {Feature title}
 
-- **Spec:** `specs/{NNN}-{nombre}/spec.md`
-- **Fecha:** {YYYY-MM-DD}
-- **Confirmado:** no
+- **Spec:** `specs/{NNN}-{name}/spec.md`
+- **Date:** {YYYY-MM-DD}
+- **Confirmed:** no
 
-No escribas código mientras **Confirmado** sea `no`. De 3 a 7 pasos, un commit por paso. Borra este párrafo al copiar el archivo.
+Do not write code while **Confirmed** is `no`. 3 to 7 steps, one commit per step. Delete this paragraph when copying the file.
 
-## Pasos
+## Steps
 
-1. **{Verbo y resultado}** — CA-1
-   - Archivos: `{ruta}`
-2. **{Verbo y resultado}** — CA-2
-   - Archivos: `{ruta}`
-3. **{Verbo y resultado}** — CA-3
-   - Archivos: `{ruta}`
+1. **{Verb and outcome}** — AC-1
+   - Files: `{path}`
+2. **{Verb and outcome}** — AC-2
+   - Files: `{path}`
+3. **{Verb and outcome}** — AC-3
+   - Files: `{path}`
 
-## Archivos afectados
+## Affected files
 
-- `{ruta}` — {crear o modificar}
+- `{path}` — {create or modify}
 
-## Preguntas antes de implementar
+## Questions before implementing
 
-| # | Tema | Pregunta | Respuesta | Dónde quedó |
+| # | Topic | Question | Answer | Where it landed |
 |---|---|---|---|---|
-| 1 | Casos límite | {pregunta} | pendiente | |
-| 2 | Vacío, error, carga | {pregunta} | pendiente | |
-| 3 | Permisos | {pregunta} | pendiente | |
-| 4 | Móvil | {pregunta} | pendiente | |
-| 5 | Accesibilidad | {pregunta} | pendiente | |
-| 6 | Detalle técnico | {pregunta} | pendiente | |
+| 1 | Edge cases | {question} | pending | |
+| 2 | Empty, error, loading | {question} | pending | |
+| 3 | Permissions | {question} | pending | |
+| 4 | Mobile | {question} | pending | |
+| 5 | Accessibility | {question} | pending | |
+| 6 | Technical detail | {question} | pending | |
 
-Borra las filas que no apliquen. No pidas confirmación con una fila en `pendiente`.
+Delete rows that do not apply. Do not ask for confirmation with a row still `pending`.
 
-## Impacto en specs anteriores
+## Impact on earlier specs
 
-| Spec | Criterio | Por qué | Acción |
+| Spec | Criterion | Why | Action |
 |---|---|---|---|
-| {NNN, o "Ninguna"} | {CA-n, o "—"} | {archivos o comportamiento} | {Reescribir y revalidar / Deprecar / Ninguna} |
+| {NNN, or "None"} | {AC-n, or "—"} | {files or behavior} | {Rewrite and re-validate / Deprecate / None} |
 
-## Confirmación
+## Confirmation
 
-- [ ] La persona ha leído el plan y las respuestas ya están volcadas a la spec.
+- [ ] The person has read the plan and the answers are already applied to the spec.

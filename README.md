@@ -82,11 +82,10 @@ description: One sentence explaining what it does and when the agent should use 
 
 | Skill | Description | Status |
 |---|---|---|
-<<<<<<< HEAD
-| [design-system-architect](skills/design-system-architect/) | Crea un design system desde cero (tokens DTCG, specs, gobernanza y guía para agentes) o audita uno existente y propone un plan de mejora. | Disponible |
-| [aria-implementation](skills/aria-implementation/) | Especifica e implementa un componente interactivo accesible: HTML nativo primero, patrón del APG, nombre, estados, teclado y foco. | Disponible |
-| [aria-review](skills/aria-review/) | Revisa código, un diff o una página y devuelve hallazgos de ARIA y teclado con severidad, criterio WCAG y un veredicto por componente. | Disponible |
-| [spec-driven-development](skills/spec-driven-development/) | Lleva una feature con un SDD medio: una spec por feature, un plan corto, commits por paso y validación de cada criterio. | Disponible |
+| [design-system-architect](skills/design-system-architect/) | Scaffolds a design system from scratch (DTCG tokens, specs, governance, and agent guidance) or audits an existing one and proposes an improvement plan. | Available |
+| [aria-implementation](skills/aria-implementation/) | Specifies and implements an accessible interactive component: native HTML first, APG pattern, name, states, keyboard, and focus. | Available |
+| [aria-review](skills/aria-review/) | Reviews code, a diff, or a page and returns ARIA and keyboard findings with severity, WCAG criterion, and a per-component verdict. | Available |
+| [spec-driven-development](skills/spec-driven-development/) | Ships a feature with medium SDD: one spec per feature, a short plan, optional epics, project validation rules, one commit per step, and criterion checks. | Available |
 
 ## License
 

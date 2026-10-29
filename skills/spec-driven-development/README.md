@@ -1,39 +1,51 @@
 # spec-driven-development
 
-Skill para un agente que lleva una feature con un SDD medio.
+Skill for an agent that ships a feature with medium SDD.
 
-Una spec dice qué se entrega, cómo se sabe que está hecha y qué no entra. Un plan corto dice los pasos y los archivos. El agente no escribe código hasta que la persona confirma ese plan. Al final, cada criterio de aceptación se comprueba y solo se marca si pasa.
+A spec says what ships, how you know it is done, and what is out. A short plan says the steps and the files. The agent does not write code until the person confirms that plan. At the end, each acceptance criterion is checked, then the project's validation rules in `specs/validation.md`. Only then does the spec become Implemented.
 
-No hace falta instalar nada. La skill son instrucciones y plantillas.
+Optional epics in `specs/epics.md` group several specs into one larger capability or product area.
 
-## Por qué un SDD medio
+Nothing to install. The skill is instructions and templates.
 
-Un SDD completo separa requisitos, diseño y tareas. Sirve cuando el cambio es grande y mucha gente tiene que alinearse. En el día a día de producto se vuelve lento: tres documentos para un filtro, un estado o un ajuste de flujo.
+## Why medium SDD
 
-El modo medio deja un solo `spec.md` por feature y un `plan.md` al lado. El control no desaparece. Sigue estando en los criterios (Dado / Cuando / Entonces), en las preguntas de antes de programar y en la validación al cerrar. Lo que se quita es el paquete de documentos que no cambia la decisión.
+Full SDD separates requirements, design, and tasks. It fits when the change is large and many people must align. In day-to-day product work it gets slow: three documents for a filter, a state, or a flow tweak.
 
-## Instalación
+The medium mode leaves one `spec.md` per feature and a `plan.md` beside it. Control does not disappear. It still lives in the criteria (Given / When / Then), in the questions before coding, in project validation at close, and optionally in epics that group related specs. What goes away is the document pack that does not change the decision.
 
-Copia `skills/spec-driven-development/` al directorio de skills que lee tu agente. Pídele una feature, un cambio de comportamiento o que abra una spec. Leerá `SKILL.md` cuando encaje.
+## Installation
 
-## Cómo se usa
+Copy `skills/spec-driven-development/` into the skills directory your agent reads. Ask for a feature, a behavior change, or to open a spec. It will read `SKILL.md` when it fits.
 
-Las specs no viven en esta carpeta. El agente las crea en el repo del producto, en `specs/NNN-nombre-corto/`.
+## How it is used
 
-1. **Spec.** Se escribe `spec.md`: historia, criterios de aceptación, requisitos técnicos, fuera de alcance y referencias. El estado pasa de Borrador a Lista cuando la das por cerrada.
-2. **Plan.** El agente escribe `plan.md` (de 3 a 7 pasos y los archivos). Antes de programar pregunta por lo que la spec no cierra: casos límite, vacío, error, carga, permisos, móvil, accesibilidad y detalles técnicos ambiguos. Si una respuesta cambia el alcance, entra en la spec. Tú confirmas el plan y entonces empieza el código.
-3. **Implementación.** Un commit por paso, citando la spec. Por ejemplo: `feat(003): CA-2 filtro por provincia`.
-4. **Validación.** El agente prueba cada criterio (test, ejecución, navegador o Storybook). Marca solo los que pasan y anota cómo. Cuando están todos, el estado queda en Implementada.
+Artifacts live in the product repo under `specs/`:
 
-Varias specs pueden ir a la vez si no se pisan los archivos. Conviene aislarlas (una rama, un worktree o un cloud agent por spec). Si una necesita a otra, se declara `Depende de: NNN` y esa espera.
+```
+specs/
+├── validation.md       # project rules (once)
+├── epics.md            # optional
+└── NNN-short-name/
+    ├── spec.md
+    └── plan.md
+```
 
-Un ajuste que no añade funcionalidad (mover archivos, pulir lo visual, un detalle de experiencia, rendimiento, limpieza) no abre spec nueva. Se anota en el registro de ajustes de la spec que ya cubre ese objetivo. Si el cambio añade comportamiento o hace que un criterio deje de cumplirse, es una spec nueva.
+1. **Project files.** On first use, create `specs/validation.md` from the template and fill the placeholders with this project's rules. Create `specs/epics.md` only when an epic is needed.
+2. **Spec.** Write `spec.md`: story, acceptance criteria, technical requirements, out of scope, and references. Status moves from Draft to Ready when you close it. If it belongs to an epic, add it under that epic's Specs list.
+3. **Plan.** The agent writes `plan.md` (3 to 7 steps and the files). Before coding it asks about what the spec does not close: edge cases, empty, error, loading, permissions, mobile, accessibility, and ambiguous technical details. If an answer changes scope, it goes into the spec. You confirm the plan and then coding starts.
+4. **Implementation.** One commit per step, citing the spec. For example: `feat(003): AC-2 filter by province`.
+5. **Validation.** The agent checks each acceptance criterion (test, run, browser, or Storybook), then walks every applicable rule in `specs/validation.md`. Both must pass before status becomes Implemented. If the spec is on an epic, its epic checkbox is marked only after that.
 
-## Qué lee el agente
+Several specs can run at once if they do not collide on files. Isolate them (one branch, worktree, or cloud agent per spec). If one needs another, declare `Depends on: NNN` and that one waits.
 
-`SKILL.md` es la entrada: el flujo, las reglas de specs en paralelo, los ajustes y el impacto sobre specs anteriores. `templates/` son los archivos que copia. `examples/` muestra una spec ya implementada, su plan y una spec deprecada que esa feature sustituyó.
+A tweak that adds no functionality (move files, polish visuals, a UX detail, performance, cleanup) does not open a new spec. It is noted in the change log of the spec that already covers that goal. If the change adds behavior or makes a criterion stop holding, it is a new spec.
 
-## Árbol
+## What the agent reads
+
+`SKILL.md` is the entry point: the flow, epics, project validation, parallel-spec rules, tweaks, and impact on earlier specs. `templates/` are the files it copies. `examples/` shows an implemented spec, its plan, a deprecated spec, a filled `validation.md`, and a filled `epics.md`.
+
+## Tree
 
 ```
 spec-driven-development/
@@ -41,11 +53,15 @@ spec-driven-development/
 ├── README.md
 ├── templates/
 │   ├── spec.md
-│   └── plan.md
+│   ├── plan.md
+│   ├── validation.md
+│   └── epics.md
 └── examples/
-    ├── 001-filtro-comunidad/
+    ├── validation.md
+    ├── epics.md
+    ├── 001-community-filter/
     │   └── spec.md
-    └── 003-filtro-provincia/
+    └── 003-province-filter/
         ├── spec.md
         └── plan.md
 ```

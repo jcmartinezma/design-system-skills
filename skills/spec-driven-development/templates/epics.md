@@ -1,8 +1,8 @@
 # Epics
 
-Epics are optional. Spec-driven development does not require this file. Use an epic only when several specs together deliver one larger capability. The specs in an epic do not have to be consecutive numbers.
+Epics are optional. Medium SDD does not require this file. Use an epic when several specs together deliver one larger capability or product area. Spec numbers in an epic do not have to be consecutive.
 
-A spec line is marked done here only after that spec's own completion criteria and `documentation/validation.md` have passed. An epic is done only when every spec listed under it is done and its definition of done is met. A spec that appears in no epic is still specified, planned, and implemented on its own.
+A spec line is marked done here only after that spec's acceptance criteria and `specs/validation.md` have passed. An epic is done only when every listed spec is done and its definition of done is met. A spec in no epic is still specified, planned, and implemented on its own.
 
 ## Entry shape
 
@@ -11,7 +11,7 @@ Copy this block under **Epic list** when an epic is needed. Do not invent a name
 ```markdown
 ## Epic: Short name
 
-One or two sentences: the larger capability this epic delivers.
+One or two sentences: the larger capability or area this epic covers.
 
 **Status:** in progress
 

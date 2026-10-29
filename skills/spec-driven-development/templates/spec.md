@@ -1,47 +1,47 @@
-# {Título de la feature}
+# {Feature title}
 
-- **Estado:** Borrador
-- **Fecha:** {YYYY-MM-DD}
-- **Reemplaza a:** {NNN}
-- **Reemplazada por:** {NNN}
-- **Depende de:** {NNN}
+- **Status:** Draft
+- **Date:** {YYYY-MM-DD}
+- **Replaces:** {NNN}
+- **Replaced by:** {NNN}
+- **Depends on:** {NNN}
 
-Quita `Reemplaza a`, `Reemplazada por` y `Depende de` cuando no apliquen. La fecha cambia cuando cambia el estado. Borra este párrafo al copiar el archivo a `specs/NNN-nombre-corto/spec.md`.
+Remove `Replaces`, `Replaced by`, and `Depends on` when they do not apply. The date changes when the status changes. Delete this paragraph when copying the file to `specs/NNN-short-name/spec.md`.
 
-## Historia
+## Story
 
-Como {usuario} quiero {acción} para {beneficio}.
+As a {user} I want {action} so that {benefit}.
 
-## Criterios de aceptación
+## Acceptance criteria
 
-- [ ] **CA-1.** Dado {contexto}, cuando {acción}, entonces {resultado}.
-- [ ] **CA-2.** Dado {contexto}, cuando {acción}, entonces {resultado}.
+- [ ] **AC-1.** Given {context}, when {action}, then {result}.
+- [ ] **AC-2.** Given {context}, when {action}, then {result}.
 
-## Requisitos técnicos
+## Technical requirements
 
-- **Stack:** {framework, lenguaje y dónde vive la feature}
-- **Componentes del design system:** {`ds-…`, o "Ninguno"}
-- **Datos y APIs:** {origen de los datos y contratos que no se pueden romper}
-- **Rendimiento:** {límite concreto, o "Sin requisito aparte"}
-- **Accesibilidad:** {teclado, nombre accesible y foco}
-- **Restricciones:** {lo que hay que respetar}
+- **Stack:** {framework, language, and where the feature lives}
+- **Design-system components:** {`ds-…`, or "None"}
+- **Data and APIs:** {data source and contracts that must not break}
+- **Performance:** {concrete limit, or "No separate requirement"}
+- **Accessibility:** {keyboard, accessible name, and focus}
+- **Constraints:** {what must be respected}
 
-## Fuera de alcance
+## Out of scope
 
-- {Comportamiento cercano que este cambio no cubre}
+- {Nearby behavior this change does not cover}
 
-## Referencias
+## References
 
-- **Figma:** {url, o "No hay"}
-- **Componentes:** {`ds-…`}
-- **Notas:** {decisiones que no son un criterio}
+- **Figma:** {url, or "None"}
+- **Components:** {`ds-…`}
+- **Notes:** {decisions that are not a criterion}
 
-## Registro de ajustes
+## Change log
 
-Ninguno.
+None.
 
-## Motivo de la deprecación
+## Deprecation reason
 
-Incluye esta sección solo si el estado es Deprecada. Si no, bórrala.
+Include this section only if the status is Deprecated. Otherwise delete it.
 
-{Por qué esta spec ya no describe el producto y qué spec la sustituye.}
+{Why this spec no longer describes the product and which spec replaces it.}
