@@ -1,40 +1,44 @@
 # design-system-skills
 
-A collection of AI agent skills for day-to-day work with design systems and Spec-Driven Development (SDD): foundations and tokens, components, documentation, governance, metrics, and spec/plan/tasks scaffolding.
+A collection of AI agent skills for design systems and Spec-Driven Development (SDD): scaffolding and auditing a system, accessible components (ARIA), and medium SDD (spec, plan, optional epics, and project validation).
 
-Each skill is a self-contained package: an agent reads its instructions and, when needed, runs its scripts to solve tasks reliably and repeatably.
+Each skill is a self-contained package. The agent reads `SKILL.md` and, when the skill includes them, uses its templates, references, or scripts.
 
 ## Why
 
-Many design-system and documentation tasks are deterministic: generate color ramps, validate contrast, export tokens, audit components, scaffold SDD docs. Instead of the agent improvising each time, these skills give clear instructions and proven code to do them well.
+Design-system and SDD work repeats the same decisions: how tokens are layered, what a component spec must include, which ARIA pattern fits, how a feature is scoped and checked. These skills give the agent a fixed workflow and, where useful, templates or a small script—so the output stays consistent instead of improvised each time.
 
 ## Repository structure
 
 ```
 design-system-skills/
 ├── README.md
-├── LICENSE
-├── CONTRIBUTING.md
+├── .gitignore
 └── skills/
     ├── skill-name/
     │   ├── SKILL.md        # Instructions for the agent (required)
     │   ├── README.md       # Documentation for people (recommended)
-    │   ├── scripts/        # Executable logic (optional)
-    │   ├── tests/          # Script tests (when scripts exist)
-    │   └── examples/       # Sample inputs and outputs (optional)
-    └── another-skill/
-        └── ...
+    │   ├── templates/      # Files the agent copies into a product repo (optional)
+    │   ├── references/     # Deeper guidance the agent reads on demand (optional)
+    │   ├── examples/       # Finished sample outputs (optional)
+    │   ├── scripts/        # Executable logic (optional; only some skills)
+    │   └── tests/          # Script tests (when scripts exist)
+    └── …
 ```
 
 ## What each skill includes
 
 | File / folder | Required | For | Content |
 |---|---|---|---|
-| `SKILL.md` | Yes | Agent | What the skill does, when to use it, steps to follow, and which scripts to run |
-| `README.md` | Recommended | People | Description, installation, dependencies, and examples |
-| `scripts/` | No | Agent | Code that handles the deterministic part of the task |
+| `SKILL.md` | Yes | Agent | What the skill does, when to use it, and the steps to follow |
+| `README.md` | Recommended | People | Description, installation, and how the skill is used |
+| `templates/` | No | Agent | Starter files copied into the product repo |
+| `references/` | No | Agent | Pattern tables, rubrics, and other detail loaded when needed |
+| `examples/` | No | Both | Finished samples that show the expected shape |
+| `scripts/` | No | Agent | Code for a deterministic check or transform |
 | `tests/` | If there are scripts | Maintainers | Tests that keep the scripts working |
-| `examples/` | No | Both | Use cases with expected input and output |
+
+Only [design-system-architect](skills/design-system-architect/) ships a script today (`scripts/validate-tokens.mjs`). The other skills are instructions, templates, and references.
 
 ### `SKILL.md` format
 
@@ -53,19 +57,19 @@ description: One sentence explaining what it does and when the agent should use 
 
 ## Steps
 1. ...
-2. Run `python scripts/generate.py --input ...` and use its output.
+2. ...
 ```
 
 ## Naming conventions
 
-- Folders in `kebab-case`, English, lowercase: `color-ramps`, `token-export`, `component-audit`.
+- Folders in `kebab-case`, English, lowercase: `design-system-architect`, `aria-review`, `spec-driven-development`.
 - The frontmatter `name` field matches the folder name.
-- Names describe the task, not the tool: `contrast-check` over `apca-script`.
-- Scripts use clear verbs: `generate.py`, `validate.py`, `export.py`.
+- Names describe the task, not the tool: `aria-review` over `axe-wrapper`.
+- When a skill has scripts, use clear verbs and a runtime that matches the skill (this repo uses Node for the token validator).
 
 ## How to use a skill
 
-1. Copy the skill folder into your agent's skills directory.
+1. Copy the skill folder into your agent's skills directory (for Cursor: `~/.cursor/skills/`).
 2. Install any dependencies listed in its `README.md`, if any.
 3. Ask the agent for the task as usual: it will read `SKILL.md` when relevant.
 
@@ -73,10 +77,10 @@ description: One sentence explaining what it does and when the agent should use 
 
 1. Create a folder under `skills/` following the naming conventions.
 2. Write `SKILL.md` with its frontmatter (`name` and `description`).
-3. If the skill needs code, add it under `scripts/` and tests under `tests/`.
-4. Document usage and dependencies in the skill's `README.md`.
-5. Add the skill to the index in this README.
-6. Open a pull request describing what the skill solves.
+3. Add `templates/`, `references/`, or `examples/` when the skill needs them.
+4. If the skill needs code, add it under `scripts/` and tests under `tests/`.
+5. Document usage in the skill's `README.md`.
+6. Add the skill to the index in this README.
 
 ## Skills index
 
@@ -86,10 +90,6 @@ description: One sentence explaining what it does and when the agent should use 
 | [aria-implementation](skills/aria-implementation/) | Specifies and implements an accessible interactive component: native HTML first, APG pattern, name, states, keyboard, and focus. | Available |
 | [aria-review](skills/aria-review/) | Reviews code, a diff, or a page and returns ARIA and keyboard findings with severity, WCAG criterion, and a per-component verdict. | Available |
 | [spec-driven-development](skills/spec-driven-development/) | Ships a feature with medium SDD: one spec per feature, a short plan, optional epics, project validation rules, one commit per step, and criterion checks. | Available |
-
-## License
-
-This project is distributed under the license in [`LICENSE`](LICENSE).
 
 ---
 
